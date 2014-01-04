@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LZViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *citylabel;
+@property (weak, nonatomic) IBOutlet UILabel *templabel;
+@property (weak, nonatomic) IBOutlet UILabel *date_ylabel;
+@property (weak, nonatomic) IBOutlet UILabel *fchhlabel;
 
 @end

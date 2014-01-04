@@ -27,6 +27,7 @@
 		9AAB23211877FC51002A7FE1 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB231A1877FC51002A7FE1 /* FMDatabasePool.m */; };
 		9AAB23221877FC51002A7FE1 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB231C1877FC51002A7FE1 /* FMDatabaseQueue.m */; };
 		9AAB23231877FC51002A7FE1 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB231E1877FC51002A7FE1 /* FMResultSet.m */; };
+		9AAB232618783828002A7FE1 /* LZWeatherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB232518783828002A7FE1 /* LZWeatherItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		9AAB231C1877FC51002A7FE1 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		9AAB231D1877FC51002A7FE1 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		9AAB231E1877FC51002A7FE1 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		9AAB232418783828002A7FE1 /* LZWeatherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZWeatherItem.h; sourceTree = "<group>"; };
+		9AAB232518783828002A7FE1 /* LZWeatherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZWeatherItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				9AAB22F01877FB57002A7FE1 /* Main.storyboard */,
 				9AAB22F31877FB57002A7FE1 /* LZViewController.h */,
 				9AAB22F41877FB57002A7FE1 /* LZViewController.m */,
+				9AAB232418783828002A7FE1 /* LZWeatherItem.h */,
+				9AAB232518783828002A7FE1 /* LZWeatherItem.m */,
 				9AAB23151877FC51002A7FE1 /* FMDatabase.h */,
 				9AAB23161877FC51002A7FE1 /* FMDatabase.m */,
 				9AAB23171877FC51002A7FE1 /* FMDatabaseAdditions.h */,
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AAB232618783828002A7FE1 /* LZWeatherItem.m in Sources */,
 				9AAB22EF1877FB57002A7FE1 /* LZAppDelegate.m in Sources */,
 				9AAB23211877FC51002A7FE1 /* FMDatabasePool.m in Sources */,
 				9AAB22F51877FB57002A7FE1 /* LZViewController.m in Sources */,
