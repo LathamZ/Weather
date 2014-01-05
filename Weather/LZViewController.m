@@ -23,14 +23,26 @@
     if ([self didDatabaseExist]) {
         LZWeatherItem *item1 = [self getItemFromDatabase];
         [self setDisplay:item1];
+    }else{
+        NSString *code = [self getLocationCode];
+        NSDictionary *weatherDic = [self getWeatherWithCityCode:code];
+        NSDictionary *weatherInfo = [weatherDic objectForKey:@"weatherinfo"];
+        [self saveDataToDatabaseWithWeatherInfo:weatherInfo];
+        LZWeatherItem *item2 = [self getItemFromDatabase];
+        [self setDisplay:item2];
     }
+    
+
+}
+
+- (void)viewDidAppear:(BOOL)animated{
     NSString *code = [self getLocationCode];
     NSDictionary *weatherDic = [self getWeatherWithCityCode:code];
     NSDictionary *weatherInfo = [weatherDic objectForKey:@"weatherinfo"];
     [self saveDataToDatabaseWithWeatherInfo:weatherInfo];
     LZWeatherItem *item2 = [self getItemFromDatabase];
     [self setDisplay:item2];
-
+    
 }
 
 - (NSString *)getLocationCode{
