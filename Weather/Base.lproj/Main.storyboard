@@ -23,12 +23,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="temp_c" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdZ-3d-y75">
-                                <rect key="frame" x="70" y="107" width="60" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cji-0D-WM4">
                                 <rect key="frame" x="192" y="58" width="66" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,6 +159,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="temp_c" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3z-L6-SAN">
+                                <rect key="frame" x="53" y="109" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -172,7 +173,7 @@
                         <outlet property="city" destination="5eu-mQ-WE4" id="jQm-CE-gQl"/>
                         <outlet property="date" destination="jpx-3V-3zh" id="sFQ-K2-0Ou"/>
                         <outlet property="relative_humidity" destination="1hr-ff-YQN" id="cFj-f7-fTG"/>
-                        <outlet property="temp_c" destination="gdZ-3d-y75" id="hGv-ZF-mzi"/>
+                        <outlet property="temp_c" destination="B3z-L6-SAN" id="mgL-Qc-gR2"/>
                         <outlet property="temp_h0" destination="oIC-gB-KFx" id="J2H-bF-JpV"/>
                         <outlet property="temp_h1" destination="w1U-q6-sFz" id="idP-zV-r4K"/>
                         <outlet property="temp_h2" destination="kI4-JW-2Pq" id="0uI-sY-ETd"/>

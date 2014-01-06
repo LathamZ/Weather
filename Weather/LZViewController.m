@@ -106,7 +106,7 @@
 
 - (void)setDisplay:(LZWeatherItem *)item{
     self.city.text = item.city;
-//    self.temp_c.text = item.temp_c;
+    self.temp_c.text = item.temp_c;
     self.temp_h0.text = item.temp_h0;
     self.temp_l0.text = item.temp_l0;
     self.temp_h1.text = item.temp_h1;
@@ -121,8 +121,8 @@
     self.weekday3.text = item.weekday3;
     self.weather.text = item.weather;
     self.date.text = item.date;
-//    self.wind_dir.text = item.wind_dir;
-//    self.wind_kph.text = item.wind_kph;
+    self.wind_dir.text = item.wind_dir;
+    self.wind_kph.text = item.wind_kph;
     self.visibility_km.text = item.visibility_km;
     self.relative_humidity.text = item.relative_humidity;
     self.weather_icon0.image = [self getImageFromURL:item.icon_url0];
@@ -147,10 +147,10 @@
     NSDictionary *day2 = [forecastday objectAtIndex:2];
     NSDictionary *day3 = [forecastday objectAtIndex:3];
     
-    NSDictionary *date0 = [day0 objectForKey:@"date"];
-    NSDictionary *date1 = [day1 objectForKey:@"date"];
-    NSDictionary *date2 = [day2 objectForKey:@"date"];
-    NSDictionary *date3 = [day3 objectForKey:@"date"];
+    NSDictionary *datedic0 = [day0 objectForKey:@"date"];
+    NSDictionary *datedic1 = [day1 objectForKey:@"date"];
+    NSDictionary *datedic2 = [day2 objectForKey:@"date"];
+    NSDictionary *datedic3 = [day3 objectForKey:@"date"];
     
     NSDictionary *high0 = [day0 objectForKey:@"high"];
     NSDictionary *low0  = [day0 objectForKey:@"low"];
@@ -166,24 +166,21 @@
     
     item.city = [display_location objectForKey:@"city"];
     item.weather = [current_observation objectForKey:@"weather"];
-    item.temp_c = [current_observation objectForKey:@"temp_c"];
+    item.temp_c = [NSString stringWithFormat:@"%@",[current_observation objectForKey:@"temp_c"]];
+
     
-    NSLog(@"!!!!! %@",item.temp_c);
+
     item.relative_humidity = [current_observation objectForKey:@"relative_humidity"];
     item.wind_dir = [current_observation objectForKey:@"wind_dir"];
-    item.wind_kph = [current_observation objectForKey:@"wind_kph"];
+    item.wind_kph = [NSString stringWithFormat:@"%@",[current_observation objectForKey:@"wind_kph"]];
     item.visibility_km = [current_observation objectForKey:@"visibility_km"];
     
-    item.year0 = [date0 objectForKey:@"year"];
-    item.month0 = [date0 objectForKey:@"month"];
-    item.date0 = [date0 objectForKey:@"date"];
-    item.date = [item.date stringByAppendingString:item.year0];
-    item.date = [item.date stringByAppendingString:@"年"];
-    item.date = [item.date stringByAppendingString:item.month0];
-    item.date = [item.date stringByAppendingString:@"月"];
-    item.date = [item.date stringByAppendingString:item.date0];
-    item.date = [item.date stringByAppendingString:@"日"];
-    NSLog(@"%@",item.date);
+    item.year0 = [datedic0 objectForKey:@"year"];
+    item.month0 = [datedic0 objectForKey:@"month"];
+    item.date0 = [datedic0 objectForKey:@"day"];
+    item.date = [NSString stringWithFormat:@"%@年%@月%@日",item.year0,item.month0,item.date0];
+
+
     item.temp_h0 = [high0 objectForKey:@"celsius"];
     item.temp_l0 = [low0 objectForKey:@"celsius"];
     item.temp_h1 = [high1 objectForKey:@"celsius"];
@@ -198,10 +195,10 @@
     item.icon_url2 = [day2 objectForKey:@"icon_url"];
     item.icon_url3 = [day3 objectForKey:@"icon_url"];
     
-    item.weekday0 = [date0 objectForKey:@"weekday"];
-    item.weekday1 = [date1 objectForKey:@"weekday"];
-    item.weekday2 = [date2 objectForKey:@"weekday"];
-    item.weekday3 = [date3 objectForKey:@"weekday"];
+    item.weekday0 = [datedic0 objectForKey:@"weekday"];
+    item.weekday1 = [datedic1 objectForKey:@"weekday"];
+    item.weekday2 = [datedic2 objectForKey:@"weekday"];
+    item.weekday3 = [datedic3 objectForKey:@"weekday"];
     
     NSLog(@"set weather item with weatherInfo finished");
     return item;
